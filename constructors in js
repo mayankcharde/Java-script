@@ -1,0 +1,24 @@
+class railwayform1 {
+    constructor(givenname, trainno, address) {
+        console.log("constructor called" + givenname + trainno)
+        this.name = givenname
+        this.trainno = trainno
+        this.adsress = address
+    }
+    preveiw() {
+        alert(this.name + "your form is for train" + this.trainno + "and tour adress is" + this.adsress)
+    }
+    submit() {
+        alert(this.name + "your form is submitted for train number" + this.trainno)
+    }
+
+    cancel() {
+        alert(this.name + "this form is cancelled" + this.trainno)
+    }
+}
+
+let mayankform2 = new railwayform1("mayank", 784512, "452 nagpur")
+// mayankform.fill()
+mayankform2.submit()
+mayankform2.cancel()
+mayankform2.preveiw()
