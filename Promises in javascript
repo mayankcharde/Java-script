@@ -1,0 +1,101 @@
+// // PROMISES IN JS 
+// let promise = new Promise((resolve, reject) => {
+//     // alert("mayank")
+//     console.log("hello mayank")
+//     resolve(90)
+// })
+
+// console.log("hello one")
+// setTimeout(function(){
+//     console.log("hello in two seconds")
+// },2000)
+// console.log("my name is "+" hello three")
+// console.log(promise)
+
+
+
+// PROMISE CHAINING 
+// let q1 = new Promise((resolve , reject)=>{
+//     setTimeout(()=>{
+//         console.log("resolved after 2 seconds")
+//     },2000)
+// })
+// r1.then((value)=>{
+//     console.log(value)
+//     let p2 = new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve("promise is resolved")
+//         },3000)
+//     })
+// }).then((value)=>{
+//     console.log("we are done!")
+//     return 2 
+// }).then((value)=>{
+//     console.log("jai shree ram!!!!")
+// })
+
+
+//MULTIPLE HANDLERS TO PROMISE '
+// let p1 = new Promise((resolve , reject)=>{
+//     setTimeout(()=>{
+//         resolve(2);
+//     } , 2000)
+// })
+// p1.then(()=>{
+//     console.log("mayank")
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve(4)
+//         } , 5000)
+//     })
+// }).then((value)=>{
+//     console.log(value)
+// })
+
+// p1.then(()=>{
+//     console.log("congrats your promise is resolved now!")
+// })
+
+
+
+
+// PROMISES API
+let p1 = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve("value 1");
+    },5000)
+})
+let p2 = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve ("value 2")
+    },2000)
+});
+
+let p3 = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve("value 3")
+    },4000)
+});
+
+p1.then((value)=>{
+    console.log(value)
+})
+p2.then((value) => {
+    console.log(value)
+})
+p3.then((value) => {
+    console.log(value)
+})
+
+
+// //promises method
+let promise_all = Promise.all([p1,p2,p3])
+let promise_all1 = Promise.allSettled([p1,p2,p3])
+let promise_all2 = Promise.race([p1,p2,p3])
+let promise_all3 = Promise.resolve([p1,p2,p3])
+let promise_all4 = Promise.reject([p1,p2,p3])
+
+promise_all.then((value)=>{
+    console.log(value)
+})
+
