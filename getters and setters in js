@@ -1,0 +1,29 @@
+class animal{
+    constructor(name){
+        this.name=name
+    }
+    fly(){
+        console.log("mai ud raha hu")
+    }
+    get name(){
+        return this.name
+    }
+    set name(mayank){
+       this.name= mayank
+    }
+}
+class rabbit extends animal{
+    eatcarrot(){
+        console.log("eating")
+    }
+}
+let a = new rabbit("bruno")
+a.fly()
+console.log(a.name)
+a.name= "mayank"
+console.log(a.name)
+let c=57
+
+console.log(a instanceof animal)
+console.log(a instanceof rabbit)
+console.log(c instanceof animal)
