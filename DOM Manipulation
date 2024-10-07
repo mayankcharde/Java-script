@@ -1,0 +1,27 @@
+//DOM MANIPULATION IN JS
+// METHODS 
+let elem = document.getElementById('click');
+console.log(elem);
+let elemclas = document.getElementsByClassName("container")
+console.log(elemclas);
+// elemclas[0].style.background ="yellow";
+elemclas[0].classList.add("bg-primary");
+// elemclas[0].classList.add("text-success");
+elemclas[0].classList.remove("text-success");
+console.log(elem.innerHTML);
+console.log(elem.innerText);
+
+console.log(elemclas[0].innerHTML);
+console.log(elemclas[0].innerText);
+
+tn = document.getElementsByTagName('button');
+console.log(tn);
+tn1 = document.getElementsByTagName('div');
+console.log(tn1);
+
+createdElement = document.createElement('p');  // paragraph
+createdElement.innerText = "this a created para";
+tn[0].appendChild(createdElement);
+createdElement2 = document.createElement('b');  // bold 
+createdElement2.innerText = "this a created bold";
+tn[0].replaceChild(createdElement2, createdElement);
