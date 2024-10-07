@@ -1,0 +1,511 @@
+// JAVASCRIPT CONSOLE API
+// console.log("mayank charde");
+// document.write("this is document");
+// document.error("making an  error");
+// console.warn("this an warning");
+
+// JS VARIABLES 
+var n1 = 74;
+var n2 = 6;
+console.log(n1 + n2);
+
+// DATATYPES IN JS 
+var num1 = 4654;
+var num2 = 73.84;
+console.log(num1 + num2);
+
+// STRINGS 
+var str1 = "hello";
+var str2 = "jai shree ram";
+console.log(str1 + str2);
+
+// OBJECTS IN JS
+var marks = {
+    mayank: 100,
+    ravi: 38,
+    aditya: 93.5,
+}
+console.log(marks);
+
+
+//BOOLEANS IN JS 
+var a = true;
+var b = false;
+console.log(a, b);
+
+// un in js 
+var und;
+console.log(und);
+
+var n = null;
+console.log(n);
+
+/*At a very high level, there are two types of data types in JavaScript
+1. Primitive data types: undefined, null, number, string, boolean, symbol
+2. Reference data types: Arrays and Objects*/
+
+
+var arr = [1, 2, "mayank", 4, 5]
+console.log(arr);
+
+// OPERATORS IN JS
+// Arithmetic Operators
+var a = 100;
+var b = 10;
+console.log("the value of a + b is", a + b);
+console.log("the value of a - b is", a - b);
+console.log("the value of a * b is", a * b);
+console.log("the value of a / b is", a / b);
+
+// Assignment Operators
+var c = b;
+c += 2;
+c -= 2; // c = c - 2;
+c *= 2;
+c /= 2;
+console.log(c);
+
+// Comparison Operators
+var x = 34;
+var y = 56;
+console.log(x == y);
+console.log(x >= y);
+console.log(x <= y);
+console.log(x > y);
+console.log(x < y);
+
+
+//Logical Operators
+
+// Logical and
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+
+// Logical or
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+// Logical not
+console.log(!false);
+console.log(!true);
+
+// ***********************************************************************
+
+// functions in js
+function avg(a, b) {
+    c = (a + b) / 2;
+    return c;
+}
+
+c1 = avg(4, 6);
+c2 = avg(36, 3);
+console.log(c1, c2);
+
+// **************************************************************************
+
+// CONITIONALS IN JS 
+var age = 35;
+if (age > 18) {
+    console.log("you can drive");
+}
+else {
+    console.log("you cannot drive");
+}
+
+age = 25;
+// if-else Ladder
+if (age > 32) {
+    console.log("You are not a kid");
+}
+else if (age > 26) {
+    console.log("Bachhe nahi rahe");
+}
+else if (age > 22) {
+    console.log("Yes Bachhe nahi rahe");
+}
+else if (age > 18) {
+    console.log("18 Bachhe nahi rahe");
+}
+else {
+    console.log("Bachhe rahe");
+}
+console.log("End of ladder");
+
+
+
+var arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(arr);
+// for (let i = 0; i < array.length; i++) {
+//    if (i==2) {
+//     // break;
+//     continue;
+//    }
+//    console.log(arr[i]);
+
+// }
+
+// do{
+//     console.log(arr[i]);
+//     j++;
+// }while(j<arr.length);
+
+// ***********************************************************
+
+let myarr = ["mayank", "camera", 37, null, true];
+// ARRAY METHOD
+console.log(myarr.length);
+myarr.pop();
+myarr.push("jai shree ram");
+myarr.shift();  // output : mayank
+const xyz = myarr.unshift("mayank");
+console.log(xyz); // output : 5
+console.log(myarr);  // outpu : (5) ['mayank', 'camera', 37, null, 'jai shree ram']
+
+// ********************************************************************************************************
+
+// String Methods in JavaScript
+let mystring = "mayank is a good boy!";
+console.log(mystring.length);
+console.log(mystring.indexOf("mayank"));
+console.log(mystring.endsWith);
+console.log(mystring.slice(1, 4));
+d = mystring.replace("mayank", "ram");
+d = d.replace("good", "bad");
+console.log(d);
+console.log(mystring);
+
+//**************************************************************************************************************8 */ 
+
+// JS DATE 
+let mydate = new Date();
+console.log(mydate.getTime());
+console.log(mydate.getFullYear());
+console.log(mydate.getDay());
+console.log(mydate.getMinutes());
+console.log(mydate.getHours());
+
+
+//************************************************************************************************************8 */ 
+
+//DOM MANIPULATION IN JS
+// METHODS 
+let elem = document.getElementById('click');
+console.log(elem);
+let elemclas = document.getElementsByClassName("container")
+console.log(elemclas);
+// elemclas[0].style.background ="yellow";
+elemclas[0].classList.add("bg-primary");
+// elemclas[0].classList.add("text-success");
+elemclas[0].classList.remove("text-success");
+console.log(elem.innerHTML);
+console.log(elem.innerText);
+
+console.log(elemclas[0].innerHTML);
+console.log(elemclas[0].innerText);
+
+tn = document.getElementsByTagName('button');
+console.log(tn);
+tn1 = document.getElementsByTagName('div');
+console.log(tn1);
+
+createdElement = document.createElement('p');  // paragraph
+createdElement.innerText = "this a created para";
+tn[0].appendChild(createdElement);
+createdElement2 = document.createElement('b');  // bold 
+createdElement2.innerText = "this a created bold";
+tn[0].replaceChild(createdElement2, createdElement);
+
+// **********************************************************************************
+
+// SELESCTING QUERY SELECTOR
+self = document.querySelector('.container'); //reyurn only one element 
+console.log(self);
+self = document.querySelectorAll('.container'); // return all node list
+console.log(self);
+
+// ***************************************************************************************
+
+// EVENTS IN JS 
+function clicked() {
+    console.log('the button was clicked');
+}
+window.onload = function () {
+    console.log('the document was loaded ');
+}
+// firstContainer.addEventListener('click', function () {
+//     document.querySelectorAll('.container')[1].innerHTML = "<b> we have clicked</b>"
+//     console.log("clicked on container");
+// })
+// firstContainer.addEventListener('mouseover', function () {
+//     console.log("mouse on container");
+// })
+// firstContainer.addEventListener('mouseout', function () {
+//     console.log("mouse out of container");
+// })
+// let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+// firstContainer.addEventListener('mouseup', function () {
+//     document.querySelectorAll('.container')[1].innerHTML = prevHTML;
+//     console.log("mouse up when clicked on container");
+// })
+// firstContainer.addEventListener('mousedown', function () {
+//     document.querySelectorAll('.container')[1].innerHTML = "<b> we have clicked</b>"
+//     console.log("mouse down when clicked on container");
+// })
+
+// *************************************************************************************************************
+
+// ARROW FUNCTION 
+// summ = (a,b)=>{
+//     return a+b;
+// }
+mayank = () => {
+    document.querySelectorAll('.container')[1].innerHTML = "<b> set timeout fired</b>";
+    console.log("i am mayank charde");
+}
+
+//*******                                                                                       ****************************************************************************** */ 
+
+// SET TIMEOUT AND SET INTERVAL 
+// setTimeout(mayank, 2000);    // IN MILISECOND 
+// setInterval(mayank, 2000);    // IN MILISECOND 
+// clr = setInterval(mayank,2000);  //  FOR STOPPING 
+
+// ********************************************************************************************************************
+
+//  JAVASCRIPT JSON
+// obj = {name:"mayank" , length:1}
+// obj = { name: "mayank", length: 1, a: { this: 'that"t' } };
+// obj = { name: "mayank", length: 1, a: { this: 'that\\"t' } };
+// jso = JSON.stringify(obj);
+// console.log(jso);
+// console.log(typeof jso);
+
+// parsed = JSON.parse({ "name": "mayank", "length": 1, "a": { "this": "that" } });
+// console.log(parsed);
+
+// ************************************************************************************************************
+
+// JavaScript localStorage
+// localStorage.setItem('name', 'harry')
+// localStorage.getItem('name')
+// localStorage.removeItem('name')
+// localStorage.clear();
+
+// ***********************************************************************************************************************
+
+// // PROMISES IN JS 
+// let promise = new Promise((resolve, reject) => {
+//     // alert("mayank")
+//     console.log("hello mayank")
+//     resolve(90)
+// })
+
+// console.log("hello one")
+// setTimeout(function(){
+//     console.log("hello in two seconds")
+// },2000)
+// console.log("my name is "+" hello three")
+// console.log(promise)
+
+// ***************************************************************************************************************************
+
+// THEN AND CATCH PROMISES IN JS 
+// let p1 = new Promise((resolve, reject) => {
+//     console.log("promise is pending")
+//     setTimeout(() => {
+//         resolve(true)
+//     }, 5000)
+// })
+// let p2 = new Promise((resolve, reject) => {
+//     console.log("promise is pending")
+//     setTimeout(() => {
+//         reject(new console.error("i am an error!"))
+//     }, 5000)
+// })
+// //for getting the value 
+// p1.then((value) => {
+//     console.log(value)
+// })
+// // to catch tha value 
+// p2.catch((error)=>{
+//     console.log("some error occured in p2")
+// })
+
+// *****************************************************************************************
+
+// // combination then and catch
+// p2.then((value)=>{
+//     console.log(value)
+// },(error)=>{
+//     console.log(error)
+// })
+
+//************************************************************************************************** */ 
+
+// PROMISE CHAINING 
+// let q1 = new Promise((resolve , reject)=>{
+//     setTimeout(()=>{
+//         console.log("resolved after 2 seconds")
+//     },2000)
+// })
+// p1.then((value)=>{
+//     console.log(value)
+//     let p2 = new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve("promise is resolved")
+//         },3000)
+//     })
+// }).then((value)=>{
+//     console.log("we are done!")
+//     return 2 
+// }).then((value)=>{
+//     console.log("jai shree ram!!!!")
+// })
+
+// *****************************************************************************
+
+//MULTIPLE HANDLERS TO PROMISE '
+// let p1 = new Promise((resolve , reject)=>{
+//     setTimeout(()=>{
+//         resolve(2);
+//     } , 2000)
+// })
+// p1.then(()=>{
+//     console.log("mayank")
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve(4)
+//         } , 5000)
+//     })
+// }).then((value)=>{
+//     console.log(value)
+// })
+
+// p1.then(()=>{
+//     console.log("congrats your promise is resolved now!")
+// })
+
+// ******************************************************************************************************
+
+// PROMISES API
+// let p1 = new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//         resolve("value 1");
+//     },5000)
+// })
+// let p2 = new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//         resolve ("value 2")
+//     },2000)
+// });
+
+// let p3 = new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//         resolve("value 3")
+//     },4000)
+// });
+
+// p1.then((value)=>{
+//     console.log(value)
+// })
+// / p2.then((value) => {
+//     console.log(value)
+// })
+// p3.then((value) => {
+//     console.log(value)
+// })
+
+// ***************************************************************************************88
+
+// //promises method
+// let promise_all = Promise.all([p1,p2,p3])
+// let promise_all1 = Promise.allSettled([p1,p2,p3])
+// let promise_all2 = Promise.race([p1,p2,p3])
+// let promise_all3 = Promise.resolve([p1,p2,p3])
+// let promise_all4 = Promise.reject([p1,p2,p3])
+
+// promise_all.then((value)=>{
+//     console.log(value)
+// })
+
+async function mayank() {
+    let delhiweather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("27 degree")
+        }, 2000)
+    })
+    let bangloreweather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("21 degree")
+        }, 5000)
+    })
+    delhiweather.then((value)=>{
+        console.log(value)
+    })
+    bangloreweather.then((value)=>{
+        console.log(value)
+    })
+
+    console.log("fetching delhi weather wait...")
+    let delhi = await delhiweather
+    console.log("fetching delhi weather" + delhi)
+
+    console.log("fetching banglore weather please wait...")
+    let banglore = await bangloreweather
+    console.log("fetching banglore weather" + banglore)
+    // return [delhi , banglore]
+}
+// SECOND WAY FOR APPLYINF ASYNC AND AWAIT FUNCTION 
+// const harry = async()=>{
+//     console.log("jai shree ram")
+// }
+const main2 = async()=>{
+    console.log("welcome!!!")
+    let a = await mayank()
+    // let b = await harry()
+}
+main2()
+
+
+let m = () =>{
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve(500)
+        },3000)
+    })
+}
+
+(async()=>{
+    let b = await m()
+    console.log(b)
+    let c = await m ()
+    console.log(c)
+    let  d = await m ()
+    console.log(d)
+    
+})
+()
+
+
+// FETCH API EXAMPLEE 
+// let hey = fetch("https://goweather.herokuapp.com/weather/Ny")
+// p.then((response) => {
+//         console.log(response.status)
+//         console.log(response.ok)
+//         console.log(response.headers)
+//         return response.json()
+// }).then((value2) => {
+//         console.log(value2)
+// })
+
+
+// let f = fetch("https://goweather.herokuapp.com/weather/Ny")
+// f.then((response) => { 
+//         return response.json()
+// }).then((response) => {
+//         console.log(response)
+// })
