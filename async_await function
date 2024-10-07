@@ -1,0 +1,32 @@
+async function mayank() {
+    let delhiweather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("27 degree")
+        }, 2000)
+    })
+    let bangloreweather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("21 degree")
+        }, 5000)
+    })
+    delhiweather.then((value)=>{
+        console.log(value)
+    })
+    bangloreweather.then((value)=>{
+        console.log(value)
+    })
+
+    console.log("fetching delhi weather wait...")
+    let delhi = await delhiweather
+    console.log("fetching delhi weather" + delhi)
+
+    console.log("fetching banglore weather please wait...")
+    let banglore = await bangloreweather
+    console.log("fetching banglore weather" + banglore)
+    // return [delhi , banglore]
+}
+const main2 = async()=>{
+    console.log("welcome!!!")
+    let a = await mayank()
+}
+main2()
