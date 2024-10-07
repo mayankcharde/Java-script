@@ -1,0 +1,31 @@
+class animal{
+    constructor(name , color){
+        this.name = name
+        this.color = color
+    }
+    run(){
+        console.log(this.name+"is running")
+    }
+    shout(){
+        console.log(this.name+"is barking")
+    }
+}
+
+class monkey extends animal{
+    eatbanana(){
+        console.log(this.name+"is eating banana")
+    }
+    hide(){
+        console.log('${this.name}is hiding')
+    }
+}
+
+let ani = new animal("bruno" , "white")
+let m = new monkey("tommy" , "orange")
+
+ani.shout()
+m.run()
+m.eatbanana()
+m.hide()
+m.run()
+// ani.hide()  thows an error
