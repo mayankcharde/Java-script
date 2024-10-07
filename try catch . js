@@ -1,0 +1,22 @@
+// THEN AND CATCH PROMISES IN JS 
+let p1 = new Promise((resolve, reject) => {
+    console.log("promise is pending")
+    setTimeout(() => {
+        resolve(true)
+    }, 5000)
+})
+let p2 = new Promise((resolve, reject) => {
+    console.log("promise is pending")
+    setTimeout(() => {
+        // reject( console.error("i am an error!")) print i am error
+        reject( new console.error("i am an error!"))
+    }, 5000)
+})
+//for getting the value 
+p1.then((value) => {
+    console.log(value)
+})
+// to catch tha value 
+p2.catch((error)=>{
+    console.log("some error occured in p2")
+})
